@@ -63,9 +63,20 @@ function initScrollReveal() {
 function initMenu() {
   const categoriesContainer = $('#menu-categories');
   const gridContainer = $('#menu-grid');
+  const viewMoreContainer = $('#view-more-container');
+  const viewMoreBtn = $('#view-more-btn');
   if (!categoriesContainer || !gridContainer) return;
 
   let currentCategory = 'all';
+  let isExpanded = false;
+  const INITIAL_ITEMS = 6;
+
+  if (viewMoreBtn) {
+    viewMoreBtn.addEventListener('click', () => {
+      isExpanded = true;
+      renderMenu();
+    });
+  }
 
   // Render categories
   function renderCategories() {
@@ -78,6 +89,7 @@ function initMenu() {
     $$('.category-btn').forEach(btn => {
       btn.addEventListener('click', (e) => {
         currentCategory = e.currentTarget.dataset.id;
+        isExpanded = false; // Reset expand state when changing categories
         renderCategories();
         renderMenu();
       });
@@ -86,11 +98,13 @@ function initMenu() {
 
   // Render menu items
   function renderMenu() {
-    const items = currentCategory === 'all' 
+    const allItems = currentCategory === 'all' 
       ? menuData 
       : menuData.filter(item => item.category === currentCategory);
 
-    gridContainer.innerHTML = items.map((item, index) => {
+    const itemsToShow = isExpanded ? allItems : allItems.slice(0, INITIAL_ITEMS);
+
+    gridContainer.innerHTML = itemsToShow.map((item, index) => {
       // Use fallback images if empty
       let imgSrc = item.img;
       if (!imgSrc) {
@@ -101,20 +115,29 @@ function initMenu() {
       }
 
       return `
-        <div class="menu-card bg-white rounded-2xl overflow-hidden border border-gray-100 reveal delay-${(index % 3) * 100}">
-          <div class="h-48 overflow-hidden">
+        <div class="menu-card h-full flex flex-col bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-[0_10px_30px_-15px_rgba(0,0,0,0.1)] hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.15)] transition-all duration-300 hover:-translate-y-2 reveal delay-${(index % 3) * 100}">
+          <div class="h-56 shrink-0 overflow-hidden relative">
             <img src="${imgSrc}" alt="${item.name}" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500"/>
-          </div>
-          <div class="p-6">
-            <div class="flex justify-between items-start mb-2">
-              <h3 class="font-display text-xl font-bold text-brand-blue">${item.name}</h3>
-              <span class="font-bold text-brand-yellow bg-brand-blue px-3 py-1 rounded-lg text-sm">₹${item.price}</span>
+            <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-xl font-bold text-brand-blue shadow-sm">
+              ₹${item.price}
             </div>
-            <p class="text-gray-500 text-sm mb-4">${item.desc}</p>
+          </div>
+          <div class="p-6 flex flex-col grow">
+            <h3 class="font-display text-xl font-bold text-brand-blue leading-tight mb-2">${item.name}</h3>
+            <p class="text-gray-500 text-sm line-clamp-2">${item.desc}</p>
           </div>
         </div>
       `;
     }).join('');
+
+    // Update view more button visibility
+    if (viewMoreContainer) {
+      if (allItems.length > INITIAL_ITEMS && !isExpanded) {
+        viewMoreContainer.classList.remove('hidden');
+      } else {
+        viewMoreContainer.classList.add('hidden');
+      }
+    }
 
     // Re-init reveal for new items
     initScrollReveal();
