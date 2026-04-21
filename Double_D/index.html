@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Double D's Café & Bakes | Sambalpur</title>
+  <meta name="description" content="Double D's Café & Bakes — Friends, Food, Coffee. Premium cafe in Sambalpur. Order via WhatsApp or book a table online."/>
+  <link rel="icon" href="/assets/logo.jpg"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet"/>
+  <script type="module" src="/src/main.js"></script>
+</head>
+<body class="antialiased bg-off-white text-dark selection:bg-brand-yellow selection:text-brand-blue">
+
+<!-- ═══ NAV ═══ -->
+<nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 px-4 sm:px-8 py-6 transition-all duration-500">
+  <div id="nav-inner" class="max-w-7xl mx-auto flex items-center justify-between rounded-full px-6 py-3 transition-all duration-500 border border-transparent">
+    <a href="#" class="flex items-center gap-3">
+      <img src="/assets/logo.jpg" alt="Double D's Logo" class="w-10 h-10 rounded-full border-2 border-brand-yellow object-cover"/>
+      <span class="font-display font-bold text-xl tracking-wide text-white uppercase">Double D's</span>
+    </a>
+    <div class="hidden md:flex items-center gap-8">
+      <a href="#menu" class="text-white/90 font-medium text-sm hover:text-brand-yellow transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-brand-yellow after:transition-all hover:after:w-full">Menu</a>
+      <a href="#work-from-cafe" class="text-white/90 font-medium text-sm hover:text-brand-yellow transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-brand-yellow after:transition-all hover:after:w-full">Work With Us</a>
+      <a href="#gallery" class="text-white/90 font-medium text-sm hover:text-brand-yellow transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-brand-yellow after:transition-all hover:after:w-full">Gallery</a>
+      <button class="book-table-btn bg-brand-yellow text-brand-blue font-bold px-6 py-2.5 rounded-full hover:scale-105 transition-transform shadow-[0_0_15px_rgba(255,209,102,0.3)]">Book a Table</button>
+    </div>
+    <button id="hamburger" aria-expanded="false" class="md:hidden flex flex-col gap-1.5 p-2 text-white">
+      <div class="w-6 h-0.5 bg-current transition-transform origin-center"></div>
+      <div class="w-6 h-0.5 bg-current transition-all origin-center"></div>
+      <div class="w-6 h-0.5 bg-current transition-transform origin-center"></div>
+    </button>
+  </div>
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden absolute top-20 left-4 right-4 bg-brand-blue border border-white/10 rounded-2xl p-6 shadow-2xl flex flex-col gap-4">
+    <a href="#menu" class="mobile-link text-white text-lg font-medium hover:text-brand-yellow">Menu</a>
+    <a href="#work-from-cafe" class="mobile-link text-white text-lg font-medium hover:text-brand-yellow">Work With Us</a>
+    <a href="#gallery" class="mobile-link text-white text-lg font-medium hover:text-brand-yellow">Gallery</a>
+    <button class="book-table-btn mobile-link bg-brand-yellow text-brand-blue font-bold px-6 py-3 rounded-xl text-center mt-2">Book a Table</button>
+  </div>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<header class="relative min-h-screen flex items-center justify-center overflow-hidden bg-brand-blue pt-20">
+  <div class="absolute inset-0 z-0 bg-[#061524]">
+    <div class="absolute inset-0 bg-brand-blue/70 z-10 mix-blend-multiply"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-brand-blue/50 via-transparent to-brand-blue z-10"></div>
+    <img src="/assets/store.webp" alt="Cafe Background" class="w-full h-full object-cover scale-[1.02] animate-slow-zoom opacity-80"/>
+    <!-- Yellow gradient glow -->
+    <div class="absolute top-1/4 -right-1/4 w-[800px] h-[800px] bg-brand-yellow/20 rounded-full blur-[150px] z-10 animate-pulse-slow"></div>
+    <div class="absolute -bottom-1/4 -left-1/4 w-[600px] h-[600px] bg-blue-500/10 rounded-full blur-[120px] z-10"></div>
+  </div>
+  
+  <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 w-full text-center">
+    <div class="inline-block mb-4 px-4 py-1.5 rounded-full border border-brand-yellow/30 bg-brand-yellow/10 backdrop-blur-sm reveal">
+      <span class="text-brand-yellow font-medium text-sm uppercase tracking-widest">Sambalpur's Premium Cafe</span>
+    </div>
+    <h1 class="font-display text-5xl md:text-7xl lg:text-8xl font-black text-white leading-tight reveal delay-100 drop-shadow-2xl">
+      Friends. Food.<br/>
+      <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-yellow via-[#FFEDB3] to-brand-yellow bg-[length:200%_auto] animate-gradient-text">Coffee.</span>
+    </h1>
+    <p class="mt-6 text-white/80 font-body text-lg md:text-xl max-w-2xl mx-auto reveal delay-200">
+      Experience artisan bakes, continental delights & handcrafted beverages in a space designed for connection.
+    </p>
+    <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 reveal delay-300">
+      <a href="#menu" class="w-full sm:w-auto px-8 py-4 bg-brand-yellow text-brand-blue font-bold rounded-full hover:-translate-y-1 transition-transform shadow-xl shadow-brand-yellow/20">Explore Menu</a>
+      <a href="https://wa.me/917854917070" target="_blank" class="w-full sm:w-auto px-8 py-4 bg-white/10 text-white font-bold rounded-full border border-white/20 hover:bg-white/20 transition-colors backdrop-blur-md flex items-center justify-center gap-2">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.418-.099.824zm-3.423-14.416c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm.082 19.165s-.005 0-.014 0c-1.562 0-3.09-.418-4.43-1.21l-.317-.187-3.29.863.878-3.208-.206-.328c-.872-1.391-1.332-2.992-1.332-4.634 0-4.858 3.951-8.811 8.814-8.811 4.861 0 8.813 3.953 8.813 8.811 0 4.856-3.952 8.809-8.816 8.809z"/></svg>
+        WhatsApp Order
+      </a>
+    </div>
+  </div>
+  
+  <!-- Wave Divider -->
+  <div class="absolute bottom-0 left-0 right-0 z-20 w-full overflow-hidden leading-none">
+    <svg class="block w-full h-[60px] md:h-[100px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+      <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.08,130.83,111.4,198.36,99.18,240.32,91.6,281.42,75.14,321.39,56.44Z" class="fill-off-white"></path>
+    </svg>
+  </div>
+</header>
+
+<!-- ═══ WORK FROM CAFE ═══ -->
+<section id="work-from-cafe" class="py-20 md:py-32 relative">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div class="order-2 lg:order-1 relative reveal">
+        <!-- Collage of new photos -->
+        <div class="grid grid-cols-2 gap-4 relative">
+          <!-- Decor element -->
+          <div class="absolute -top-6 -left-6 w-20 h-20 border-t-4 border-l-4 border-brand-yellow/30 rounded-tl-3xl z-0"></div>
+          <img src="/assets/interior 2.o.webp" alt="Cafe View" class="rounded-3xl object-cover w-full h-[280px] shadow-[0_20px_40px_-15px_rgba(0,0,0,0.3)] transform translate-y-8 relative z-10 hover:-translate-y-2 transition-transform duration-500"/>
+          <img src="/assets/coffee.webp" alt="Coffee" class="rounded-3xl object-cover w-full h-[280px] shadow-[0_20px_40px_-15px_rgba(0,0,0,0.3)] relative z-10 hover:-translate-y-2 transition-transform duration-500"/>
+        </div>
+        <div class="absolute -bottom-8 -right-8 bg-brand-yellow p-6 rounded-2xl shadow-xl hidden md:block z-20">
+          <p class="font-display text-4xl font-bold text-brand-blue">Free</p>
+          <p class="font-medium text-brand-blue">High-Speed Wi-Fi</p>
+        </div>
+      </div>
+      <div class="order-1 lg:order-2 reveal">
+        <h2 class="font-display text-4xl md:text-5xl font-bold text-brand-blue mb-6">Your Perfect Workspace</h2>
+        <p class="text-gray-600 mb-8 leading-relaxed text-lg">
+          Tired of working from home? Double D's offers the perfect environment to focus, create, and collaborate. Enjoy comfortable seating, ample power outlets, and of course, exceptional coffee to keep you going.
+        </p>
+        <ul class="space-y-4 mb-8">
+          <li class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-full bg-brand-blue/10 flex items-center justify-center text-brand-blue">⚡</div>
+            <span class="font-medium">Abundant Power Outlets</span>
+          </li>
+          <li class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-full bg-brand-blue/10 flex items-center justify-center text-brand-blue">📶</div>
+            <span class="font-medium">Reliable High-Speed Wi-Fi</span>
+          </li>
+          <li class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-full bg-brand-blue/10 flex items-center justify-center text-brand-blue">🛋️</div>
+            <span class="font-medium">Comfortable Ergonomic Seating</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ DIGITAL MENU ═══ -->
+<section id="menu" class="py-20 md:py-32 bg-white relative">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="text-center mb-16 reveal">
+      <h2 class="font-display text-5xl font-bold text-brand-blue">Our Menu</h2>
+      <p class="text-gray-500 mt-4">Crafted with passion, served with love.</p>
+    </div>
+    
+    <!-- Category Tabs -->
+    <div class="flex flex-wrap justify-center gap-3 mb-12 reveal delay-100" id="menu-categories">
+      <!-- Generated by JS -->
+    </div>
+    
+    <!-- Menu Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="menu-grid">
+      <!-- Generated by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- ═══ GALLERY ═══ -->
+<section id="gallery" class="py-20 md:py-32 bg-off-white overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="flex justify-between items-end mb-12 reveal">
+      <div>
+        <h2 class="font-display text-4xl md:text-5xl font-bold text-brand-blue">Moments at DD's</h2>
+        <p class="text-gray-500 mt-2">Tag us on Instagram @cafe_double_ds</p>
+      </div>
+      <a href="https://www.instagram.com/cafe_double_ds?igsh=MTR5Ym04ZGY4MXNuaw==" target="_blank" class="hidden md:inline-flex items-center gap-2 text-brand-blue font-bold hover:text-brand-yellow transition-colors">
+        View All <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+      </a>
+    </div>
+    
+    <!-- Masonry-ish Gallery -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 reveal delay-100 group">
+      <div class="overflow-hidden rounded-2xl relative"><img src="/assets/interior 3.o.webp" class="w-full h-48 md:h-64 object-cover transform hover:scale-110 transition-transform duration-700 cursor-pointer peer group-hover:opacity-60 hover:!opacity-100"/></div>
+      <div class="overflow-hidden rounded-2xl relative"><img src="/assets/interior 4.o.webp" class="w-full h-48 md:h-64 object-cover transform hover:scale-110 transition-transform duration-700 cursor-pointer peer group-hover:opacity-60 hover:!opacity-100"/></div>
+      <div class="overflow-hidden rounded-2xl relative"><img src="/assets/chicken fried.webp" class="w-full h-48 md:h-64 object-cover transform hover:scale-110 transition-transform duration-700 cursor-pointer peer group-hover:opacity-60 hover:!opacity-100"/></div>
+      <div class="overflow-hidden rounded-2xl relative"><img src="/assets/chicken platter.webp" class="w-full h-48 md:h-64 object-cover transform hover:scale-110 transition-transform duration-700 cursor-pointer peer group-hover:opacity-60 hover:!opacity-100"/></div>
+      
+      <div class="overflow-hidden rounded-2xl md:col-span-2 relative"><img src="/assets/chocolate truffle cake.jpeg" class="w-full h-48 md:h-64 object-cover transform hover:scale-110 transition-transform duration-700 cursor-pointer peer group-hover:opacity-60 hover:!opacity-100"/></div>
+      <div class="overflow-hidden rounded-2xl relative"><img src="/assets/pasta and garlic bread.webp" class="w-full h-48 md:h-64 object-cover transform hover:scale-110 transition-transform duration-700 cursor-pointer peer group-hover:opacity-60 hover:!opacity-100"/></div>
+      <div class="overflow-hidden rounded-2xl relative"><img src="/assets/pizza2.webp" class="w-full h-48 md:h-64 object-cover transform hover:scale-110 transition-transform duration-700 cursor-pointer peer group-hover:opacity-60 hover:!opacity-100"/></div>
+      
+      <div class="overflow-hidden rounded-2xl relative"><img src="/assets/platter.webp" class="w-full h-48 md:h-64 object-cover transform hover:scale-110 transition-transform duration-700 cursor-pointer peer group-hover:opacity-60 hover:!opacity-100"/></div>
+      <div class="overflow-hidden rounded-2xl relative"><img src="/assets/strawberry drink.webp" class="w-full h-48 md:h-64 object-cover transform hover:scale-110 transition-transform duration-700 cursor-pointer peer group-hover:opacity-60 hover:!opacity-100"/></div>
+      <div class="overflow-hidden rounded-2xl relative"><img src="/assets/drink.webp" class="w-full h-48 md:h-64 object-cover transform hover:scale-110 transition-transform duration-700 cursor-pointer peer group-hover:opacity-60 hover:!opacity-100"/></div>
+      <div class="overflow-hidden rounded-2xl relative"><img src="/assets/chicken popcorn.webp" class="w-full h-48 md:h-64 object-cover transform hover:scale-110 transition-transform duration-700 cursor-pointer peer group-hover:opacity-60 hover:!opacity-100"/></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="bg-brand-blue text-white pt-20 pb-10 relative overflow-hidden">
+  <!-- Top decorative wave -->
+  <div class="absolute top-0 left-0 right-0 w-full overflow-hidden leading-none rotate-180">
+    <svg class="block w-full h-[40px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+      <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.08,130.83,111.4,198.36,99.18,240.32,91.6,281.42,75.14,321.39,56.44Z" class="fill-off-white"></path>
+    </svg>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
+      <div>
+        <h3 class="font-display text-2xl font-bold mb-4">Double D's</h3>
+        <p class="text-white/70 mb-6">Sambalpur's favourite destination for artisan bakes, coffee, and good vibes.</p>
+        <div class="flex gap-4">
+          <a href="https://www.instagram.com/cafe_double_ds?igsh=MTR5Ym04ZGY4MXNuaw==" target="_blank" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-yellow hover:text-brand-blue transition-colors">
+            IG
+          </a>
+          <a href="https://wa.me/917854917070" target="_blank" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-yellow hover:text-brand-blue transition-colors">
+            WA
+          </a>
+        </div>
+      </div>
+      <div>
+        <h3 class="font-display text-xl font-bold mb-4">Visit Us</h3>
+        <p class="text-white/70 mb-2">Hota Complex, Beside Jagannath Mandir</p>
+        <p class="text-white/70 mb-2">Budharaja, Sambalpur</p>
+        <p class="text-white/70">Odisha - 768004</p>
+      </div>
+      <div>
+        <h3 class="font-display text-xl font-bold mb-4">Hours & Contact</h3>
+        <p class="text-white/70 mb-2">Open Daily: 8:00 AM - 10:00 PM</p>
+        <p class="text-white/70 mb-4">Phone: +91 78549 17070</p>
+        <a href="https://wa.me/917854917070" target="_blank" class="inline-block bg-brand-yellow text-brand-blue font-bold px-6 py-3 rounded-xl hover:scale-105 transition-transform">
+          Order Now
+        </a>
+      </div>
+    </div>
+    <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-white/50">
+      <p>© 2026 Double D's Café & Bakes. All rights reserved.</p>
+      <div class="flex gap-4 mt-4 md:mt-0">
+        <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+        <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Book a Table Modal -->
+<div id="booking-modal" class="fixed inset-0 z-[100] flex items-center justify-center hidden opacity-0 transition-opacity duration-500 ease-out">
+  <div class="absolute inset-0 bg-brand-blue/60 backdrop-blur-md transition-opacity" id="booking-modal-overlay"></div>
+  <div class="relative bg-white/10 backdrop-blur-2xl border border-white/20 rounded-[2rem] p-8 md:p-10 max-w-lg w-full mx-4 shadow-[0_0_50px_rgba(0,0,0,0.3)] transform scale-95 opacity-0 transition-all duration-500 ease-out" id="booking-modal-content">
+    <button id="close-modal" class="absolute top-6 right-6 text-white/70 hover:text-white transition-colors bg-white/5 hover:bg-white/10 p-2 rounded-full">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+    </button>
+    <div class="inline-block mb-4 px-3 py-1 rounded-full border border-brand-yellow/30 bg-brand-yellow/10">
+      <span class="text-brand-yellow font-medium text-xs uppercase tracking-widest">Reservation</span>
+    </div>
+    <h3 class="font-display text-3xl font-bold text-white mb-2">Book Your Table</h3>
+    <p class="text-white/70 mb-8 text-sm">Fill out the details below and we'll confirm your reservation instantly via WhatsApp.</p>
+    
+    <form id="booking-form" class="space-y-5">
+      <div>
+        <label class="block text-white/80 text-sm font-medium mb-1.5 ml-1">Your Name</label>
+        <input type="text" id="b-name" required class="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-3.5 text-white placeholder-white/30 focus:outline-none focus:border-brand-yellow focus:bg-white/10 transition-all" placeholder="John Doe">
+      </div>
+      <div class="grid grid-cols-2 gap-4">
+        <div>
+          <label class="block text-white/80 text-sm font-medium mb-1.5 ml-1">Date</label>
+          <input type="date" id="b-date" required class="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-3.5 text-white placeholder-white/30 focus:outline-none focus:border-brand-yellow focus:bg-white/10 transition-all [color-scheme:dark]">
+        </div>
+        <div>
+          <label class="block text-white/80 text-sm font-medium mb-1.5 ml-1">Time</label>
+          <input type="time" id="b-time" required class="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-3.5 text-white placeholder-white/30 focus:outline-none focus:border-brand-yellow focus:bg-white/10 transition-all [color-scheme:dark]">
+        </div>
+      </div>
+      <div>
+        <label class="block text-white/80 text-sm font-medium mb-1.5 ml-1">Number of Guests</label>
+        <select id="b-guests" required class="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-3.5 text-white focus:outline-none focus:border-brand-yellow focus:bg-white/10 transition-all [&>option]:bg-brand-blue appearance-none">
+          <option value="1">1 Person</option>
+          <option value="2" selected>2 People</option>
+          <option value="3">3 People</option>
+          <option value="4">4 People</option>
+          <option value="5+">5+ People</option>
+        </select>
+      </div>
+      <div>
+        <label class="block text-white/80 text-sm font-medium mb-1.5 ml-1">Special Requests (Optional)</label>
+        <textarea id="b-requests" rows="2" class="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-3.5 text-white placeholder-white/30 focus:outline-none focus:border-brand-yellow focus:bg-white/10 transition-all resize-none" placeholder="e.g. Window seat, Birthday setup..."></textarea>
+      </div>
+      <button type="submit" class="w-full mt-6 bg-brand-yellow text-brand-blue font-bold text-lg px-6 py-4 rounded-2xl hover:-translate-y-1 transition-all duration-300 shadow-[0_10px_25px_-5px_rgba(255,209,102,0.4)] flex items-center justify-center gap-2">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.418-.099.824zm-3.423-14.416c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm.082 19.165s-.005 0-.014 0c-1.562 0-3.09-.418-4.43-1.21l-.317-.187-3.29.863.878-3.208-.206-.328c-.872-1.391-1.332-2.992-1.332-4.634 0-4.858 3.951-8.811 8.814-8.811 4.861 0 8.813 3.953 8.813 8.811 0 4.856-3.952 8.809-8.816 8.809z"/></svg>
+        Confirm via WhatsApp
+      </button>
+    </form>
+  </div>
+</div>
+
+</body>
+</html>

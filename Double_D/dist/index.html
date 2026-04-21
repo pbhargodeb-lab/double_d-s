@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Double D's Café & Bakes | Sambalpur's Premium Cafe</title>
+  <meta name="description" content="Double D's Café & Bakes — Friends, Food, Coffee. Premium cafe in Sambalpur. Order via WhatsApp or book a table online."/>
+  <meta property="og:title" content="Double D's Café & Bakes"/>
+  <meta property="og:description" content="Sambalpur's favourite cafe. Bakes, Continental, Beverages — order now!"/>
+  <meta property="og:image" content="/assets/store.webp"/>
+  <link rel="icon" href="/assets/logo.jpg"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet"/>
+  <script type="module" crossorigin src="/assets/index-Bv1_U4m3.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-CDUYQXta.css">
+</head>
+<body class="antialiased">
+
+<!-- Offline Bar -->
+<div id="offline-bar" class="offline-bar">⚠️ Connection Lost <button id="offline-retry" class="ml-2 underline font-bold">Retry</button></div>
+
+<!-- WhatsApp Fallback Popup -->
+<div id="fallback-popup" class="hidden fixed inset-0 z-[60] items-center justify-center bg-black/60 backdrop-blur-sm p-4">
+  <div class="bg-white rounded-2xl p-8 max-w-sm w-full text-center shadow-2xl">
+    <p class="text-4xl mb-3">📞</p>
+    <h3 class="font-serif text-xl font-bold text-ink mb-2">WhatsApp not available?</h3>
+    <p class="text-gray-600 mb-4">Call us directly to place your order:</p>
+    <a href="tel:+917854917070" class="block text-2xl font-bold text-brand-blue-500 mb-4">+91 78549 17070</a>
+    <button id="close-fallback" class="text-gray-400 hover:text-ink transition-colors text-sm">Close</button>
+  </div>
+</div>
+
+<!-- ═══ NAV ═══ -->
+<nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 bg-brand-blue-700/90 backdrop-blur-md py-4 transition-all duration-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
+    <a href="#" class="flex items-center gap-3">
+      <img src="/assets/logo.jpg" alt="Double D's" class="w-10 h-10 rounded-full object-cover border-2 border-brand-yellow-500"/>
+      <span class="font-serif text-xl font-bold text-white hidden sm:block">Double D's</span>
+    </a>
+    <div class="hidden md:flex items-center gap-8">
+      <a href="#menu" class="text-white/80 hover:text-brand-yellow-500 transition-colors text-sm font-medium">Menu</a>
+      <a href="#book" class="text-white/80 hover:text-brand-yellow-500 transition-colors text-sm font-medium">Book a Table</a>
+      <a href="#work" class="text-white/80 hover:text-brand-yellow-500 transition-colors text-sm font-medium">Work Hub</a>
+      <a href="#location" class="text-white/80 hover:text-brand-yellow-500 transition-colors text-sm font-medium">Location</a>
+      <a href="https://wa.me/917854917070?text=Hi!" target="_blank" class="bg-brand-yellow-500 hover:bg-brand-yellow-600 text-ink font-bold px-5 py-2 rounded-full text-sm btn-lift">WhatsApp Us</a>
+    </div>
+    <button id="hamburger" class="hamburger md:hidden flex flex-col gap-1.5 p-2" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden bg-brand-blue-700 border-t border-white/10 px-6 py-4 space-y-3">
+    <a href="#menu" class="block text-white/90 hover:text-brand-yellow-500 py-2 font-medium">🍰 Menu</a>
+    <a href="#book" class="block text-white/90 hover:text-brand-yellow-500 py-2 font-medium">📅 Book a Table</a>
+    <a href="#work" class="block text-white/90 hover:text-brand-yellow-500 py-2 font-medium">💻 Work Hub</a>
+    <a href="#location" class="block text-white/90 hover:text-brand-yellow-500 py-2 font-medium">📍 Location</a>
+    <a href="tel:+917854917070" class="block text-brand-yellow-500 py-2 font-bold">📞 +91 78549 17070</a>
+  </div>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<header id="hero" class="relative min-h-screen flex items-center overflow-hidden">
+  <div class="absolute inset-0">
+    <img src="/assets/store.webp" alt="Double D's Cafe Interior" class="w-full h-full object-cover"/>
+    <div class="hero-overlay absolute inset-0"></div>
+  </div>
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-32 w-full">
+    <div class="max-w-2xl">
+      <!-- Status -->
+      <div class="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-6 animate-fade-in-up">
+        <span id="status-dot" class="status-dot open"></span>
+        <span id="status-text" class="text-sm font-semibold text-green-400">Open Now</span>
+        <span class="text-white/50 mx-1">|</span>
+        <span class="text-white/70 text-sm">⭐ 4.6 · 500+ reviews</span>
+      </div>
+      <h1 class="font-serif text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white leading-[1.1] mb-6 animate-fade-in-up" style="animation-delay:0.15s">
+        Friends. Food.<br/><span class="text-brand-yellow-500">Coffee.</span>
+      </h1>
+      <p class="text-white/80 text-lg sm:text-xl leading-relaxed mb-8 max-w-lg animate-fade-in-up" style="animation-delay:0.3s">
+        Sambalpur's favourite cafe for artisan bakes, continental delights & handcrafted beverages.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 animate-fade-in-up" style="animation-delay:0.45s">
+        <a href="#book" class="bg-brand-yellow-500 hover:bg-brand-yellow-600 text-ink font-bold py-4 px-8 rounded-full text-center btn-lift animate-pulse-glow text-lg">Book a Table</a>
+        <a href="#menu" class="border-2 border-white/30 hover:border-white text-white font-semibold py-4 px-8 rounded-full text-center btn-lift backdrop-blur-sm hover:bg-white/10 transition-colors text-lg">View Menu</a>
+      </div>
+    </div>
+  </div>
+  <!-- Scroll indicator -->
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-float">
+    <div class="w-6 h-10 rounded-full border-2 border-white/40 flex items-start justify-center p-2">
+      <div class="w-1.5 h-3 bg-brand-yellow-500 rounded-full animate-bounce"></div>
+    </div>
+  </div>
+</header>
+
+<!-- ═══ MENU ═══ -->
+<section id="menu" class="py-20 sm:py-28 bg-sand">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="text-center mb-12 reveal">
+      <span class="text-brand-yellow-600 font-semibold text-sm uppercase tracking-widest">Our Menu</span>
+      <h2 class="font-serif text-4xl sm:text-5xl font-bold text-ink mt-3">What's Cooking Today?</h2>
+      <p class="text-gray-500 mt-4 max-w-lg mx-auto">From signature bakes to continental favourites — browse, pick, and order via WhatsApp.</p>
+    </div>
+    <!-- Search -->
+    <div class="max-w-md mx-auto mb-8 reveal">
+      <div class="relative">
+        <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+        <input id="menu-search" type="text" placeholder="Search for Chicken Lasagna..." class="form-input pl-12 !rounded-full !border-brand-blue-500/20 shadow-blue"/>
+      </div>
+    </div>
+    <!-- Tabs -->
+    <div id="menu-tabs" class="flex gap-3 mb-10 overflow-x-auto hide-scrollbar pb-2 justify-start sm:justify-center reveal"></div>
+    <!-- Grid -->
+    <div id="menu-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 reveal"></div>
+  </div>
+</section>
+
+<!-- ═══ BOOKING ═══ -->
+<section id="book" class="py-20 sm:py-28 bg-brand-blue-500 pattern-dots relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div class="reveal">
+        <span class="text-brand-yellow-500 font-semibold text-sm uppercase tracking-widest">Reservations</span>
+        <h2 class="font-serif text-4xl sm:text-5xl font-bold text-white mt-3 mb-6">Book Your Table</h2>
+        <p class="text-white/70 text-lg mb-6 leading-relaxed">Skip the wait — reserve your spot and we'll have everything ready when you arrive.</p>
+        <img src="/assets/combo.webp" alt="Double D's Food" class="rounded-2xl shadow-2xl hidden lg:block max-w-sm border-4 border-white/10"/>
+      </div>
+      <div class="reveal">
+        <form id="booking-form" class="glass rounded-2xl p-8 space-y-5">
+          <div>
+            <label class="text-white/90 text-sm font-medium mb-1.5 block">Your Name *</label>
+            <input id="book-name" type="text" placeholder="e.g. Priya Sharma" class="form-input" required/>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <label class="text-white/90 text-sm font-medium mb-1.5 block">Date *</label>
+              <input id="book-date" type="date" class="form-input" required/>
+            </div>
+            <div>
+              <label class="text-white/90 text-sm font-medium mb-1.5 block">Time *</label>
+              <select id="book-time" class="form-input" required>
+                <option value="">Select</option>
+                <option>08:00 AM</option><option>09:00 AM</option><option>10:00 AM</option>
+                <option>11:00 AM</option><option>12:00 PM</option><option>01:00 PM</option>
+                <option>02:00 PM</option><option>03:00 PM</option><option>04:00 PM</option>
+                <option>05:00 PM</option><option>06:00 PM</option><option>07:00 PM</option>
+                <option>08:00 PM</option><option>09:00 PM</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <label class="text-white/90 text-sm font-medium mb-1.5 block">Number of Guests *</label>
+            <input id="book-guests" type="number" min="1" max="20" placeholder="e.g. 4" class="form-input" required/>
+          </div>
+          <div id="booking-error" class="hidden bg-error/20 text-white text-sm p-3 rounded-lg">⚠️ Please fill in all fields correctly.</div>
+          <div id="booking-success" class="hidden bg-success/20 text-white text-sm p-3 rounded-lg">✅ Request sent! Check WhatsApp to confirm.</div>
+          <button type="submit" class="w-full bg-brand-yellow-500 hover:bg-brand-yellow-600 text-ink font-bold py-4 rounded-full btn-lift text-lg transition-colors">
+            Send Booking Request →
+          </button>
+          <p class="text-white/50 text-xs text-center">Opens WhatsApp with your reservation details</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ WORK HUB ═══ -->
+<section id="work" class="py-20 sm:py-28 bg-sand">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="text-center mb-12 reveal">
+      <span class="text-brand-yellow-600 font-semibold text-sm uppercase tracking-widest">Work from Cafe</span>
+      <h2 class="font-serif text-4xl sm:text-5xl font-bold text-ink mt-3">Your Second Office</h2>
+      <p class="text-gray-500 mt-4 max-w-lg mx-auto">Power up your productivity with great coffee, fast WiFi, and a calm atmosphere.</p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 reveal">
+      <div class="bg-white rounded-2xl p-6 text-center shadow-blue hover:shadow-xl transition-shadow border border-gray-100">
+        <div class="text-4xl mb-4">📶</div>
+        <h3 class="font-serif text-lg font-bold text-ink mb-1">High-Speed WiFi</h3>
+        <p class="text-gray-500 text-sm">50 Mbps — stream, call, and code without lag.</p>
+        <div class="mt-3 inline-block bg-success/10 text-success text-xs font-bold px-3 py-1 rounded-full">Available</div>
+      </div>
+      <div class="bg-white rounded-2xl p-6 text-center shadow-blue hover:shadow-xl transition-shadow border border-gray-100">
+        <div class="text-4xl mb-4">🔌</div>
+        <h3 class="font-serif text-lg font-bold text-ink mb-1">Power Sockets</h3>
+        <p class="text-gray-500 text-sm">Charging points at every table — stay powered all day.</p>
+        <div class="mt-3 inline-block bg-success/10 text-success text-xs font-bold px-3 py-1 rounded-full">Every Table</div>
+      </div>
+      <div class="bg-white rounded-2xl p-6 text-center shadow-blue hover:shadow-xl transition-shadow border border-gray-100">
+        <div class="text-4xl mb-4">❄️</div>
+        <h3 class="font-serif text-lg font-bold text-ink mb-1">Air Conditioned</h3>
+        <p class="text-gray-500 text-sm">Beat the Sambalpur heat in a cool, comfortable space.</p>
+        <div class="mt-3 inline-block bg-brand-blue-500/10 text-brand-blue-500 text-xs font-bold px-3 py-1 rounded-full">Always On</div>
+      </div>
+      <div class="bg-white rounded-2xl p-6 text-center shadow-blue hover:shadow-xl transition-shadow border border-gray-100">
+        <div class="text-4xl mb-4">🤫</div>
+        <h3 class="font-serif text-lg font-bold text-ink mb-1">Calm Ambiance</h3>
+        <p class="text-gray-500 text-sm">Soft music & minimal noise — perfect for deep work.</p>
+        <div class="mt-3 inline-block bg-brand-yellow-500/20 text-brand-yellow-600 text-xs font-bold px-3 py-1 rounded-full">Quiet Zone</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ LOCATION ═══ -->
+<section id="location" class="py-20 sm:py-28 bg-brand-blue-700">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div class="reveal">
+        <span class="text-brand-yellow-500 font-semibold text-sm uppercase tracking-widest">Find Us</span>
+        <h2 class="font-serif text-4xl sm:text-5xl font-bold text-white mt-3 mb-6">Visit Double D's</h2>
+        <div class="space-y-4 text-white/80">
+          <div class="flex items-start gap-3">
+            <span class="text-brand-yellow-500 text-xl mt-0.5">📍</span>
+            <p>Hota Complex, Beside Jagannath Mandir,<br/>Budharaja, Sambalpur, Odisha — 768004</p>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="text-brand-yellow-500 text-xl">⏰</span>
+            <p>8:00 AM – 10:00 PM · All Days</p>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="text-brand-yellow-500 text-xl">📞</span>
+            <a href="tel:+917854917070" class="hover:text-brand-yellow-500 transition-colors">+91 78549 17070</a>
+          </div>
+        </div>
+        <a href="https://www.google.com/maps/dir//Double+D's+Cafe+%26+Bakes,+Hota+Complex,+Budharaja,+Sambalpur" target="_blank" class="inline-flex items-center gap-2 mt-8 bg-brand-yellow-500 hover:bg-brand-yellow-600 text-ink font-bold py-3 px-8 rounded-full btn-lift transition-colors">
+          Get Directions →
+        </a>
+      </div>
+      <div class="map-container reveal rounded-2xl overflow-hidden shadow-2xl">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3718.5!2d83.97!3d21.47!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjHCsDI4JzEyLjAiTiA4M8KwNTgnMTIuMCJF!5e0!3m2!1sen!2sin!4v1" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Double D's Location"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ INSTAGRAM ═══ -->
+<section class="py-20 sm:py-28 bg-sand">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 text-center reveal">
+    <span class="text-brand-yellow-600 font-semibold text-sm uppercase tracking-widest">Follow Us</span>
+    <h2 class="font-serif text-4xl sm:text-5xl font-bold text-ink mt-3 mb-4">@doubleds_cafe</h2>
+    <p class="text-gray-500 mb-10 max-w-md mx-auto">See what's fresh today — follow us for daily specials, behind-the-scenes, and more!</p>
+    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 max-w-3xl mx-auto">
+      <a href="https://instagram.com/doubleds_cafe" target="_blank" class="rounded-2xl overflow-hidden group"><img src="/assets/pizza.webp" alt="Pizza" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"/></a>
+      <a href="https://instagram.com/doubleds_cafe" target="_blank" class="rounded-2xl overflow-hidden group"><img src="/assets/pasta.webp" alt="Pasta" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"/></a>
+      <a href="https://instagram.com/doubleds_cafe" target="_blank" class="rounded-2xl overflow-hidden group"><img src="/assets/coffee.webp" alt="Coffee" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"/></a>
+      <a href="https://instagram.com/doubleds_cafe" target="_blank" class="rounded-2xl overflow-hidden group"><img src="/assets/coldcoffee.webp" alt="Cold Coffee" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"/></a>
+      <a href="https://instagram.com/doubleds_cafe" target="_blank" class="rounded-2xl overflow-hidden group"><img src="/assets/spaghetti.webp" alt="Spaghetti" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"/></a>
+      <a href="https://instagram.com/doubleds_cafe" target="_blank" class="rounded-2xl overflow-hidden group"><img src="/assets/combo.webp" alt="Combo" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"/></a>
+    </div>
+    <a href="https://instagram.com/doubleds_cafe" target="_blank" class="inline-flex items-center gap-2 mt-10 bg-brand-blue-500 hover:bg-brand-blue-700 text-white font-bold py-3 px-8 rounded-full btn-lift transition-colors">Follow on Instagram</a>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="bg-brand-blue-700 py-12 border-t-4 border-brand-yellow-500">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+      <div>
+        <div class="flex items-center gap-3 mb-4">
+          <img src="/assets/logo.jpg" alt="Double D's" class="w-12 h-12 rounded-full border-2 border-brand-yellow-500"/>
+          <div>
+            <p class="font-serif text-xl font-bold text-white">Double D's</p>
+            <p class="text-white/50 text-sm">Café & Bakes</p>
+          </div>
+        </div>
+        <p class="text-white/60 text-sm leading-relaxed">Friends · Food · Coffee<br/>Sambalpur's favourite destination for premium bakes and continental cuisine.</p>
+      </div>
+      <div>
+        <h4 class="text-brand-yellow-500 font-semibold mb-4">Quick Links</h4>
+        <div class="space-y-2">
+          <a href="#menu" class="block text-white/70 hover:text-brand-yellow-500 transition-colors text-sm">Our Menu</a>
+          <a href="#book" class="block text-white/70 hover:text-brand-yellow-500 transition-colors text-sm">Book a Table</a>
+          <a href="#work" class="block text-white/70 hover:text-brand-yellow-500 transition-colors text-sm">Work from Cafe</a>
+          <a href="#location" class="block text-white/70 hover:text-brand-yellow-500 transition-colors text-sm">Find Us</a>
+        </div>
+      </div>
+      <div>
+        <h4 class="text-brand-yellow-500 font-semibold mb-4">Get in Touch</h4>
+        <div class="space-y-3">
+          <a href="tel:+917854917070" class="flex items-center gap-2 text-white/70 hover:text-white transition-colors text-sm">📞 +91 78549 17070</a>
+          <a href="https://wa.me/917854917070" target="_blank" class="flex items-center gap-2 text-white/70 hover:text-white transition-colors text-sm">💬 WhatsApp Us</a>
+          <a href="https://instagram.com/doubleds_cafe" target="_blank" class="flex items-center gap-2 text-white/70 hover:text-white transition-colors text-sm">📸 @doubleds_cafe</a>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-white/10 mt-8 pt-6 text-center">
+      <p class="text-white/40 text-sm">© 2026 Double D's Café & Bakes. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Mobile Bottom Bar -->
+<div id="mobile-bar" class="mobile-bottom-bar md:hidden">
+  <a href="tel:+917854917070" class="flex-1 bg-white/10 text-white font-bold py-3 rounded-full text-center text-sm hover:bg-white/20 transition-colors">📞 Call Now</a>
+  <a href="https://wa.me/917854917070?text=Hi!" target="_blank" class="flex-1 bg-brand-yellow-500 text-ink font-bold py-3 rounded-full text-center text-sm hover:bg-brand-yellow-600 transition-colors">💬 WhatsApp</a>
+</div>
+
+</body>
+</html>
