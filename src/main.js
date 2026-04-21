@@ -98,9 +98,20 @@ function initMenu() {
 
   // Render menu items
   function renderMenu() {
-    const allItems = currentCategory === 'all' 
-      ? menuData 
-      : menuData.filter(item => item.category === currentCategory);
+    let allItems = [];
+    if (currentCategory === 'all') {
+      const bakes = menuData.filter(i => i.category === 'bakes');
+      const savouries = menuData.filter(i => i.category === 'savouries');
+      const beverages = menuData.filter(i => i.category === 'beverages');
+      const maxLength = Math.max(bakes.length, savouries.length, beverages.length);
+      for (let i = 0; i < maxLength; i++) {
+        if (bakes[i]) allItems.push(bakes[i]);
+        if (savouries[i]) allItems.push(savouries[i]);
+        if (beverages[i]) allItems.push(beverages[i]);
+      }
+    } else {
+      allItems = menuData.filter(item => item.category === currentCategory);
+    }
 
     const itemsToShow = isExpanded ? allItems : allItems.slice(0, INITIAL_ITEMS);
 
