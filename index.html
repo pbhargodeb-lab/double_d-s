@@ -4,27 +4,45 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Double D's Café & Bakes | Sambalpur</title>
-  <meta name="description" content="Double D's Café & Bakes — Friends, Food, Coffee. Premium cafe in Sambalpur. Order via WhatsApp or book a table online."/>
+  <meta name="description" content="Double D's Café & Bakes — Friends, Food, Coffee. Premium cafe in Sambalpur serving artisan bakes, continental delights & handcrafted beverages."/>
+  <!-- Open Graph -->
+  <meta property="og:title" content="Double D's Café & Bakes | Sambalpur"/>
+  <meta property="og:description" content="Friends. Food. Coffee. Premium café in Sambalpur serving artisan bakes, continental delights & handcrafted beverages."/>
+  <meta property="og:image" content="/assets/store.webp"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:locale" content="en_IN"/>
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Double D's Café & Bakes | Sambalpur"/>
+  <meta name="twitter:description" content="Friends. Food. Coffee. Premium café in Sambalpur."/>
+  <meta name="twitter:image" content="/assets/store.webp"/>
+  <!-- Favicon -->
   <link rel="icon" href="/assets/logo.jpg"/>
+  <link rel="apple-touch-icon" href="/assets/logo.jpg"/>
+  <!-- Preload hero image -->
+  <link rel="preload" as="image" href="/assets/store.webp"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet"/>
   <script type="module" src="/src/main.js"></script>
+  <!-- Intro failsafe: auto-hide if JS fails -->
+  <noscript><style>#intro-overlay{display:none !important;}</style></noscript>
+  <style>#intro-overlay{animation:introFallback 0s 5s forwards}@keyframes introFallback{to{opacity:0;pointer-events:none;display:none}}</style>
 </head>
 <body class="antialiased bg-off-white text-dark selection:bg-brand-yellow selection:text-brand-blue">
 
 <!-- ═══ NAV ═══ -->
 <nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 px-4 sm:px-8 py-6 transition-all duration-500">
-  <div id="nav-inner" class="max-w-7xl mx-auto flex items-center justify-between rounded-full px-6 py-3 transition-all duration-500 border border-transparent">
+  <div id="nav-inner" class="nav-3d max-w-7xl mx-auto flex items-center justify-between rounded-full px-6 py-3 transition-all duration-500 border border-transparent">
     <a href="#" class="flex items-center gap-3">
-      <img src="/assets/logo.jpg" alt="Double D's Logo" class="w-10 h-10 rounded-full border-2 border-brand-yellow object-cover"/>
-      <span class="font-display font-bold text-xl tracking-wide text-white uppercase">Double D's</span>
+      <img src="/assets/logo.jpg" alt="Double D's Logo" class="w-10 h-10 rounded-full border-2 border-brand-yellow object-cover" style="box-shadow: 0 4px 15px rgba(255,209,102,0.3);"/>
+      <span class="font-display font-bold text-xl tracking-wide text-white uppercase" style="text-shadow: 0 2px 4px rgba(0,0,0,0.3);">Double D's</span>
     </a>
     <div class="hidden md:flex items-center gap-8">
       <a href="#menu" class="text-white/90 font-medium text-sm hover:text-brand-yellow transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-brand-yellow after:transition-all hover:after:w-full">Menu</a>
       <a href="#work-from-cafe" class="text-white/90 font-medium text-sm hover:text-brand-yellow transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-brand-yellow after:transition-all hover:after:w-full">Work With Us</a>
       <a href="#gallery" class="text-white/90 font-medium text-sm hover:text-brand-yellow transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-brand-yellow after:transition-all hover:after:w-full">Gallery</a>
-      <button class="book-table-btn bg-brand-yellow text-brand-blue font-bold px-6 py-2.5 rounded-full hover:scale-105 transition-transform shadow-[0_0_15px_rgba(255,209,102,0.3)]">Book a Table</button>
+      <button class="book-table-btn btn-3d bg-brand-yellow text-brand-blue font-bold px-6 py-2.5 rounded-full hover:scale-105 transition-transform shadow-[0_0_15px_rgba(255,209,102,0.3)]">Book a Table</button>
     </div>
     <button id="hamburger" aria-expanded="false" class="md:hidden flex flex-col gap-1.5 p-2 text-white">
       <div class="w-6 h-0.5 bg-current transition-transform origin-center"></div>
@@ -33,7 +51,7 @@
     </button>
   </div>
   <!-- Mobile Menu -->
-  <div id="mobile-menu" class="hidden absolute top-20 left-4 right-4 bg-brand-blue border border-white/10 rounded-2xl p-6 shadow-2xl flex flex-col gap-4">
+  <div id="mobile-menu" class="hidden absolute top-20 left-4 right-4 bg-brand-blue border border-white/10 rounded-2xl p-6 shadow-2xl flex flex-col gap-4" style="box-shadow: 0 25px 60px -10px rgba(0,0,0,0.5);">
     <a href="#menu" class="mobile-link text-white text-lg font-medium hover:text-brand-yellow">Menu</a>
     <a href="#work-from-cafe" class="mobile-link text-white text-lg font-medium hover:text-brand-yellow">Work With Us</a>
     <a href="#gallery" class="mobile-link text-white text-lg font-medium hover:text-brand-yellow">Gallery</a>
@@ -41,38 +59,98 @@
   </div>
 </nav>
 
-<!-- ═══ HERO ═══ -->
-<header class="relative min-h-screen flex items-center justify-center overflow-hidden bg-brand-blue pt-20">
-  <div class="absolute inset-0 z-0 bg-[#061524]">
-    <div class="absolute inset-0 bg-brand-blue/70 z-10 mix-blend-multiply"></div>
-    <div class="absolute inset-0 bg-gradient-to-b from-brand-blue/50 via-transparent to-brand-blue z-10"></div>
-    <img src="/assets/store.webp" alt="Cafe Background" class="w-full h-full object-cover scale-[1.02] animate-slow-zoom opacity-80"/>
-    <!-- Yellow gradient glow -->
-    <div class="absolute top-1/4 -right-1/4 w-[800px] h-[800px] bg-brand-yellow/20 rounded-full blur-[150px] z-10 animate-pulse-slow"></div>
-    <div class="absolute -bottom-1/4 -left-1/4 w-[600px] h-[600px] bg-blue-500/10 rounded-full blur-[120px] z-10"></div>
-  </div>
-  
-  <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 w-full text-center">
-    <div class="inline-block mb-4 px-4 py-1.5 rounded-full border border-brand-yellow/30 bg-brand-yellow/10 backdrop-blur-sm reveal">
-      <span class="text-brand-yellow font-medium text-sm uppercase tracking-widest">Sambalpur's Premium Cafe</span>
+<!-- ═══ PREMIUM INTRO ═══ -->
+<div id="intro-overlay" class="fixed inset-0 z-[200] flex items-center justify-center bg-[#06111f]">
+  <div class="flex flex-col items-center">
+    <!-- Logo -->
+    <img src="/assets/logo.jpg" alt="Double D's" id="intro-logo" class="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover mb-6 opacity-0 scale-90 border-2 border-white/10" style="transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.19,1,0.22,1); box-shadow: 0 0 40px rgba(255,209,102,0.08);"/>
+    <!-- Wordmark -->
+    <div class="overflow-hidden">
+      <h2 id="intro-name" class="font-display text-3xl md:text-4xl font-bold text-white tracking-[0.15em] uppercase translate-y-full opacity-0" style="transition: transform 0.9s cubic-bezier(0.19,1,0.22,1), opacity 0.9s cubic-bezier(0.19,1,0.22,1);">
+        Double D's
+      </h2>
     </div>
-    <h1 class="font-display text-5xl md:text-7xl lg:text-8xl font-black text-white leading-tight reveal delay-100 drop-shadow-2xl">
-      Friends. Food.<br/>
-      <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-yellow via-[#FFEDB3] to-brand-yellow bg-[length:200%_auto] animate-gradient-text">Coffee.</span>
+    <!-- Thin expanding line -->
+    <div id="intro-line" class="h-[1px] w-0 bg-gradient-to-r from-transparent via-brand-yellow to-transparent mt-5 transition-all duration-[1200ms] ease-[cubic-bezier(0.19,1,0.22,1)]"></div>
+    <!-- Subtle subtitle -->
+    <div class="overflow-hidden mt-4">
+      <p id="intro-sub" class="font-body text-[11px] md:text-xs text-white/40 uppercase tracking-[0.4em] translate-y-full opacity-0" style="transition: transform 0.7s cubic-bezier(0.19,1,0.22,1) 0.3s, opacity 0.7s ease 0.3s;">
+        Café &amp; Bakes · Sambalpur
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ HERO ═══ -->
+<header id="hero-section" class="relative min-h-[100svh] flex items-center justify-center overflow-hidden bg-[#06111f]">
+  <!-- Static background -->
+  <div class="absolute inset-0 z-0">
+    <img src="/assets/store.webp" alt="" class="w-full h-full object-cover" style="animation: kenBurns 20s ease-in-out infinite alternate;"/>
+    <div class="absolute inset-0 z-10 bg-gradient-to-b from-[#06111f]/90 via-[#06111f]/55 to-[#06111f]/95"></div>
+  </div>
+
+  <!-- Subtle ambient light — just one, off-center -->
+  <div class="absolute top-[20%] right-[10%] w-[500px] h-[500px] bg-brand-yellow/[0.04] rounded-full blur-[120px] z-[11] pointer-events-none"></div>
+
+  <!-- ═══ HERO CONTENT ═══ -->
+  <div class="relative z-20 max-w-5xl mx-auto px-4 sm:px-6 w-full text-center" id="hero-content">
+    
+    <!-- Badge — clip reveal -->
+    <div class="overflow-hidden mb-6">
+      <div id="story-badge" class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/[0.08] bg-white/[0.03] backdrop-blur-sm" style="translate: 0 100%; opacity: 0; transition: translate 0.8s cubic-bezier(0.19,1,0.22,1), opacity 0.8s ease;">
+        <div class="w-1.5 h-1.5 rounded-full bg-brand-yellow"></div>
+        <span class="text-white/50 font-body font-medium text-[11px] uppercase tracking-[0.25em]">Sambalpur's Premium Cafe</span>
+      </div>
+    </div>
+
+    <!-- Headline — each word has its own clip-mask container -->
+    <h1 class="font-display text-5xl md:text-7xl lg:text-[6.5rem] font-black leading-[1.05] tracking-[-0.02em]">
+      <span class="overflow-hidden inline-block">
+        <span id="word-friends" class="hero-word inline-block text-white" style="translate: 0 110%; transition: translate 0.7s cubic-bezier(0.19,1,0.22,1);">Friends.</span>
+      </span>
+      <span class="inline-block w-3 md:w-5"></span>
+      <span class="overflow-hidden inline-block">
+        <span id="word-food" class="hero-word inline-block text-white" style="translate: 0 110%; transition: translate 0.7s cubic-bezier(0.19,1,0.22,1);">Food.</span>
+      </span>
+      <br class="hidden sm:block"/>
+      <span class="overflow-hidden inline-block">
+        <span id="word-coffee" class="hero-word inline-block text-transparent bg-clip-text bg-gradient-to-r from-brand-yellow via-[#FFE8A3] to-brand-yellow bg-[length:200%_auto] animate-gradient-text" style="translate: 0 110%; transition: translate 0.7s cubic-bezier(0.19,1,0.22,1);">Coffee.</span>
+      </span>
     </h1>
-    <p class="mt-6 text-white/80 font-body text-lg md:text-xl max-w-2xl mx-auto reveal delay-200">
-      Experience artisan bakes, continental delights & handcrafted beverages in a space designed for connection.
-    </p>
-    <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 reveal delay-300">
-      <a href="#menu" class="w-full sm:w-auto px-8 py-4 bg-brand-yellow text-brand-blue font-bold rounded-full hover:-translate-y-1 transition-transform shadow-xl shadow-brand-yellow/20">Explore Menu</a>
-      <a href="https://wa.me/917854917070" target="_blank" class="w-full sm:w-auto px-8 py-4 bg-white/10 text-white font-bold rounded-full border border-white/20 hover:bg-white/20 transition-colors backdrop-blur-md flex items-center justify-center gap-2">
-        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.418-.099.824zm-3.423-14.416c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm.082 19.165s-.005 0-.014 0c-1.562 0-3.09-.418-4.43-1.21l-.317-.187-3.29.863.878-3.208-.206-.328c-.872-1.391-1.332-2.992-1.332-4.634 0-4.858 3.951-8.811 8.814-8.811 4.861 0 8.813 3.953 8.813 8.811 0 4.856-3.952 8.809-8.816 8.809z"/></svg>
+
+    <!-- Thin separator -->
+    <div class="flex justify-center mt-8 mb-8">
+      <div id="story-line" class="h-[1px] w-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transition-all duration-[1000ms] ease-[cubic-bezier(0.19,1,0.22,1)]"></div>
+    </div>
+
+    <!-- Description -->
+    <div class="overflow-hidden">
+      <p id="story-desc" class="font-body text-white/50 text-base md:text-lg max-w-xl mx-auto leading-relaxed" style="translate: 0 100%; opacity: 0; transition: translate 0.8s cubic-bezier(0.19,1,0.22,1), opacity 0.8s ease;">
+        Artisan bakes, continental delights &amp; handcrafted beverages — in a space designed for connection.
+      </p>
+    </div>
+
+    <!-- CTA Buttons -->
+    <div id="story-buttons" class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3" style="translate: 0 24px; opacity: 0; transition: translate 0.8s cubic-bezier(0.19,1,0.22,1), opacity 0.8s ease;">
+      <a href="#menu" class="group w-full sm:w-auto px-7 py-3.5 bg-brand-yellow text-brand-blue font-bold text-sm rounded-full hover:-translate-y-0.5 transition-all duration-300 shadow-[0_0_0_0_rgba(255,209,102,0)] hover:shadow-[0_8px_30px_-8px_rgba(255,209,102,0.35)]">
+        Explore Menu
+      </a>
+      <a href="https://wa.me/917854917070" target="_blank" class="w-full sm:w-auto px-7 py-3.5 bg-transparent text-white/70 font-medium text-sm rounded-full border border-white/10 hover:border-white/25 hover:text-white hover:bg-white/[0.03] transition-all duration-300 flex items-center justify-center gap-2">
+        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.418-.099.824zm-3.423-14.416c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm.082 19.165s-.005 0-.014 0c-1.562 0-3.09-.418-4.43-1.21l-.317-.187-3.29.863.878-3.208-.206-.328c-.872-1.391-1.332-2.992-1.332-4.634 0-4.858 3.951-8.811 8.814-8.811 4.861 0 8.813 3.953 8.813 8.811 0 4.856-3.952 8.809-8.816 8.809z"/></svg>
         WhatsApp Order
       </a>
     </div>
   </div>
+
+  <!-- Minimal scroll indicator -->
+  <div id="scroll-indicator" class="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 opacity-0 flex flex-col items-center gap-3" style="transition: opacity 1s ease;">
+    <span class="text-white/25 text-[10px] uppercase tracking-[0.4em] font-body">Discover</span>
+    <div class="w-[1px] h-8 bg-gradient-to-b from-white/30 to-transparent relative overflow-hidden">
+      <div class="absolute top-0 left-0 w-full h-3 bg-brand-yellow/60 animate-scroll-line"></div>
+    </div>
+  </div>
   
-  <!-- Uniform Curve Divider -->
+  <!-- Curve Divider -->
   <div class="absolute bottom-0 left-0 right-0 z-20 w-full overflow-hidden leading-none">
     <svg class="block w-full h-[40px] md:h-[80px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
       <path d="M0 0 Q600 120 1200 0 L1200 120 L0 120 Z" class="fill-off-white"></path>
@@ -81,38 +159,38 @@
 </header>
 
 <!-- ═══ WORK FROM CAFE ═══ -->
-<section id="work-from-cafe" class="py-20 md:py-32 relative">
+<section id="work-from-cafe" class="py-20 md:py-32 relative depth-shadow perspective-container">
   <div class="max-w-7xl mx-auto px-4 sm:px-6">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
       <div class="order-2 lg:order-1 relative reveal">
         <!-- Collage of new photos -->
-        <div class="grid grid-cols-2 gap-4 relative">
+        <div class="image-3d-stack grid grid-cols-2 gap-4 relative">
           <!-- Decor element -->
           <div class="absolute -top-6 -left-6 w-20 h-20 border-t-4 border-l-4 border-brand-yellow/30 rounded-tl-3xl z-0"></div>
-          <img src="/assets/interior 2.o.webp" alt="Cafe View" class="rounded-3xl object-cover w-full h-[280px] shadow-[0_20px_40px_-15px_rgba(0,0,0,0.3)] transform translate-y-8 relative z-10 hover:-translate-y-2 transition-transform duration-500"/>
-          <img src="/assets/coffee.webp" alt="Coffee" class="rounded-3xl object-cover w-full h-[280px] shadow-[0_20px_40px_-15px_rgba(0,0,0,0.3)] relative z-10 hover:-translate-y-2 transition-transform duration-500"/>
+          <img src="/assets/interior 2.o.webp" alt="Cafe View" class="rounded-3xl object-cover w-full h-[280px] relative z-10 cursor-pointer"/>
+          <img src="/assets/coffee.webp" alt="Coffee" class="rounded-3xl object-cover w-full h-[280px] relative z-10 cursor-pointer"/>
         </div>
-        <div class="absolute -bottom-8 -right-8 bg-brand-yellow p-6 rounded-2xl shadow-xl hidden md:block z-20">
+        <div class="floating-3d-badge absolute -bottom-8 -right-8 bg-brand-yellow p-6 rounded-2xl hidden md:block z-20">
           <p class="font-display text-4xl font-bold text-brand-blue">Free</p>
           <p class="font-medium text-brand-blue">High-Speed Wi-Fi</p>
         </div>
       </div>
       <div class="order-1 lg:order-2 reveal">
-        <h2 class="font-display text-4xl md:text-5xl font-bold text-brand-blue mb-6">Your Perfect Workspace</h2>
+        <h2 class="section-title-3d font-display text-4xl md:text-5xl font-bold text-brand-blue mb-6">Your Perfect Workspace</h2>
         <p class="text-gray-600 mb-8 leading-relaxed text-lg">
           Tired of working from home? Double D's offers the perfect environment to focus, create, and collaborate. Enjoy comfortable seating, ample power outlets, and of course, exceptional coffee to keep you going.
         </p>
         <ul class="space-y-4 mb-8">
-          <li class="flex items-center gap-3">
-            <div class="w-8 h-8 rounded-full bg-brand-blue/10 flex items-center justify-center text-brand-blue">⚡</div>
+          <li class="feature-item-3d flex items-center gap-3">
+            <div class="w-8 h-8 rounded-full bg-brand-blue/10 flex items-center justify-center text-brand-blue" style="box-shadow: 0 4px 10px rgba(10,37,64,0.1);">⚡</div>
             <span class="font-medium">Abundant Power Outlets</span>
           </li>
-          <li class="flex items-center gap-3">
-            <div class="w-8 h-8 rounded-full bg-brand-blue/10 flex items-center justify-center text-brand-blue">📶</div>
+          <li class="feature-item-3d flex items-center gap-3">
+            <div class="w-8 h-8 rounded-full bg-brand-blue/10 flex items-center justify-center text-brand-blue" style="box-shadow: 0 4px 10px rgba(10,37,64,0.1);">📶</div>
             <span class="font-medium">Reliable High-Speed Wi-Fi</span>
           </li>
-          <li class="flex items-center gap-3">
-            <div class="w-8 h-8 rounded-full bg-brand-blue/10 flex items-center justify-center text-brand-blue">🛋️</div>
+          <li class="feature-item-3d flex items-center gap-3">
+            <div class="w-8 h-8 rounded-full bg-brand-blue/10 flex items-center justify-center text-brand-blue" style="box-shadow: 0 4px 10px rgba(10,37,64,0.1);">🛋️</div>
             <span class="font-medium">Comfortable Ergonomic Seating</span>
           </li>
         </ul>
@@ -122,10 +200,10 @@
 </section>
 
 <!-- ═══ DIGITAL MENU ═══ -->
-<section id="menu" class="py-20 md:py-32 bg-white relative">
+<section id="menu" class="py-20 md:py-32 bg-white relative perspective-container">
   <div class="max-w-7xl mx-auto px-4 sm:px-6">
     <div class="text-center mb-16 reveal">
-      <h2 class="font-display text-5xl font-bold text-brand-blue">Our Menu</h2>
+      <h2 class="section-title-3d font-display text-5xl font-bold text-brand-blue">Our Menu</h2>
       <p class="text-gray-500 mt-4">Crafted with passion, served with love.</p>
     </div>
     
@@ -141,7 +219,7 @@
 
     <!-- View More Button -->
     <div class="mt-12 text-center hidden" id="view-more-container">
-      <button id="view-more-btn" class="px-10 py-4 rounded-full border-2 border-brand-blue text-brand-blue font-bold hover:bg-brand-blue hover:text-brand-yellow transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-1">
+      <button id="view-more-btn" class="btn-3d px-10 py-4 rounded-full border-2 border-brand-blue text-brand-blue font-bold hover:bg-brand-blue hover:text-brand-yellow transition-all duration-300">
         View Full Menu
       </button>
     </div>
@@ -149,11 +227,11 @@
 </section>
 
 <!-- ═══ GALLERY ═══ -->
-<section id="gallery" class="py-20 md:py-32 bg-off-white overflow-hidden">
+<section id="gallery" class="py-20 md:py-32 bg-off-white overflow-hidden perspective-container">
   <div class="max-w-7xl mx-auto px-4 sm:px-6">
     <div class="flex justify-between items-end mb-12 reveal">
       <div>
-        <h2 class="font-display text-4xl md:text-5xl font-bold text-brand-blue">Moments at DD's</h2>
+        <h2 class="section-title-3d font-display text-4xl md:text-5xl font-bold text-brand-blue">Moments at DD's</h2>
         <p class="text-gray-500 mt-2">Tag us on Instagram @cafe_double_ds</p>
       </div>
       <a href="https://www.instagram.com/cafe_double_ds?igsh=MTR5Ym04ZGY4MXNuaw==" target="_blank" class="hidden md:inline-flex items-center gap-2 text-brand-blue font-bold hover:text-brand-yellow transition-colors">
@@ -161,27 +239,27 @@
       </a>
     </div>
     
-    <!-- Masonry-ish Gallery -->
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 reveal delay-100 group">
-      <div class="overflow-hidden rounded-2xl relative"><img src="/assets/interior 3.o.webp" class="w-full h-48 md:h-64 object-cover transform hover:scale-110 transition-transform duration-700 cursor-pointer peer group-hover:opacity-60 hover:!opacity-100"/></div>
-      <div class="overflow-hidden rounded-2xl relative"><img src="/assets/interior 4.o.webp" class="w-full h-48 md:h-64 object-cover transform hover:scale-110 transition-transform duration-700 cursor-pointer peer group-hover:opacity-60 hover:!opacity-100"/></div>
-      <div class="overflow-hidden rounded-2xl relative"><img src="/assets/chicken fried.webp" class="w-full h-48 md:h-64 object-cover transform hover:scale-110 transition-transform duration-700 cursor-pointer peer group-hover:opacity-60 hover:!opacity-100"/></div>
-      <div class="overflow-hidden rounded-2xl relative"><img src="/assets/chicken platter.webp" class="w-full h-48 md:h-64 object-cover transform hover:scale-110 transition-transform duration-700 cursor-pointer peer group-hover:opacity-60 hover:!opacity-100"/></div>
+    <!-- Masonry-ish Gallery with 3D effects -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 reveal delay-100">
+      <div class="gallery-3d-item overflow-hidden rounded-2xl relative"><img src="/assets/interior 3.o.webp" alt="Café interior cozy seating" loading="lazy" class="w-full h-48 md:h-64 object-cover transition-transform duration-700"/></div>
+      <div class="gallery-3d-item overflow-hidden rounded-2xl relative"><img src="/assets/interior 4.o.webp" alt="Café ambience and décor" loading="lazy" class="w-full h-48 md:h-64 object-cover transition-transform duration-700"/></div>
+      <div class="gallery-3d-item overflow-hidden rounded-2xl relative"><img src="/assets/chicken fried.webp" alt="Crispy fried chicken" loading="lazy" class="w-full h-48 md:h-64 object-cover transition-transform duration-700"/></div>
+      <div class="gallery-3d-item overflow-hidden rounded-2xl relative"><img src="/assets/chicken platter.webp" alt="Chicken platter with sides" loading="lazy" class="w-full h-48 md:h-64 object-cover transition-transform duration-700"/></div>
       
-      <div class="overflow-hidden rounded-2xl md:col-span-2 relative"><img src="/assets/chocolate truffle cake.jpeg" class="w-full h-48 md:h-64 object-cover transform hover:scale-110 transition-transform duration-700 cursor-pointer peer group-hover:opacity-60 hover:!opacity-100"/></div>
-      <div class="overflow-hidden rounded-2xl relative"><img src="/assets/pasta and garlic bread.webp" class="w-full h-48 md:h-64 object-cover transform hover:scale-110 transition-transform duration-700 cursor-pointer peer group-hover:opacity-60 hover:!opacity-100"/></div>
-      <div class="overflow-hidden rounded-2xl relative"><img src="/assets/pizza2.webp" class="w-full h-48 md:h-64 object-cover transform hover:scale-110 transition-transform duration-700 cursor-pointer peer group-hover:opacity-60 hover:!opacity-100"/></div>
+      <div class="gallery-3d-item overflow-hidden rounded-2xl md:col-span-2 relative"><img src="/assets/chocolate truffle cake.jpeg" alt="Chocolate truffle cake" loading="lazy" class="w-full h-48 md:h-64 object-cover transition-transform duration-700"/></div>
+      <div class="gallery-3d-item overflow-hidden rounded-2xl relative"><img src="/assets/pasta and garlic bread.webp" alt="Pasta with garlic bread" loading="lazy" class="w-full h-48 md:h-64 object-cover transition-transform duration-700"/></div>
+      <div class="gallery-3d-item overflow-hidden rounded-2xl relative"><img src="/assets/pizza2.webp" alt="Fresh baked pizza" loading="lazy" class="w-full h-48 md:h-64 object-cover transition-transform duration-700"/></div>
       
-      <div class="overflow-hidden rounded-2xl relative"><img src="/assets/platter.webp" class="w-full h-48 md:h-64 object-cover transform hover:scale-110 transition-transform duration-700 cursor-pointer peer group-hover:opacity-60 hover:!opacity-100"/></div>
-      <div class="overflow-hidden rounded-2xl relative"><img src="/assets/strawberry drink.webp" class="w-full h-48 md:h-64 object-cover transform hover:scale-110 transition-transform duration-700 cursor-pointer peer group-hover:opacity-60 hover:!opacity-100"/></div>
-      <div class="overflow-hidden rounded-2xl relative"><img src="/assets/drink.webp" class="w-full h-48 md:h-64 object-cover transform hover:scale-110 transition-transform duration-700 cursor-pointer peer group-hover:opacity-60 hover:!opacity-100"/></div>
-      <div class="overflow-hidden rounded-2xl relative"><img src="/assets/chicken popcorn.webp" class="w-full h-48 md:h-64 object-cover transform hover:scale-110 transition-transform duration-700 cursor-pointer peer group-hover:opacity-60 hover:!opacity-100"/></div>
+      <div class="gallery-3d-item overflow-hidden rounded-2xl relative"><img src="/assets/platter.webp" alt="Chef's special platter" loading="lazy" class="w-full h-48 md:h-64 object-cover transition-transform duration-700"/></div>
+      <div class="gallery-3d-item overflow-hidden rounded-2xl relative"><img src="/assets/strawberry drink.webp" alt="Strawberry drink" loading="lazy" class="w-full h-48 md:h-64 object-cover transition-transform duration-700"/></div>
+      <div class="gallery-3d-item overflow-hidden rounded-2xl relative"><img src="/assets/drink.webp" alt="Handcrafted beverage" loading="lazy" class="w-full h-48 md:h-64 object-cover transition-transform duration-700"/></div>
+      <div class="gallery-3d-item overflow-hidden rounded-2xl relative"><img src="/assets/chicken popcorn.webp" alt="Chicken popcorn bites" loading="lazy" class="w-full h-48 md:h-64 object-cover transition-transform duration-700"/></div>
     </div>
   </div>
 </section>
 
 <!-- ═══ FOOTER ═══ -->
-<footer class="bg-brand-blue text-white pt-20 pb-10 relative overflow-hidden">
+<footer class="footer-3d bg-brand-blue text-white pt-20 pb-10 relative overflow-hidden">
   <!-- Top decorative curve -->
   <div class="absolute top-0 left-0 right-0 w-full overflow-hidden leading-none rotate-180">
     <svg class="block w-full h-[40px] md:h-[80px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -189,17 +267,20 @@
     </svg>
   </div>
 
+  <!-- 3D ambient glow -->
+  <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-brand-yellow/5 rounded-full blur-[100px] pointer-events-none"></div>
+
   <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
       <div>
-        <h3 class="font-display text-2xl font-bold mb-4">Double D's</h3>
+        <h3 class="font-display text-2xl font-bold mb-4" style="text-shadow: 0 2px 4px rgba(0,0,0,0.3);">Double D's</h3>
         <p class="text-white/70 mb-6">Sambalpur's favourite destination for artisan bakes, coffee, and good vibes.</p>
-        <div class="flex gap-4">
-          <a href="https://www.instagram.com/cafe_double_ds?igsh=MTR5Ym04ZGY4MXNuaw==" target="_blank" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-yellow hover:text-brand-blue transition-colors">
-            IG
+        <div class="flex gap-3">
+          <a href="https://www.instagram.com/cafe_double_ds?igsh=MTR5Ym04ZGY4MXNuaw==" target="_blank" aria-label="Instagram" class="btn-3d w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-yellow hover:text-brand-blue transition-colors">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
           </a>
-          <a href="https://wa.me/917854917070" target="_blank" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-yellow hover:text-brand-blue transition-colors">
-            WA
+          <a href="https://wa.me/917854917070" target="_blank" aria-label="WhatsApp" class="btn-3d w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-yellow hover:text-brand-blue transition-colors">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.418-.099.824zm-3.423-14.416c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm.082 19.165s-.005 0-.014 0c-1.562 0-3.09-.418-4.43-1.21l-.317-.187-3.29.863.878-3.208-.206-.328c-.872-1.391-1.332-2.992-1.332-4.634 0-4.858 3.951-8.811 8.814-8.811 4.861 0 8.813 3.953 8.813 8.811 0 4.856-3.952 8.809-8.816 8.809z"/></svg>
           </a>
         </div>
       </div>
@@ -207,58 +288,64 @@
         <h3 class="font-display text-xl font-bold mb-4">Visit Us</h3>
         <p class="text-white/70 mb-2">Hota Complex, Beside Jagannath Mandir</p>
         <p class="text-white/70 mb-2">Budharaja, Sambalpur</p>
-        <p class="text-white/70">Odisha - 768004</p>
+        <p class="text-white/70 mb-4">Odisha - 768004</p>
+        <a href="https://www.google.com/maps/search/Double+D's+Cafe+Budharaja+Sambalpur+Odisha" target="_blank" class="inline-flex items-center gap-1.5 text-brand-yellow/80 hover:text-brand-yellow text-sm font-medium transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          Get Directions
+        </a>
       </div>
       <div>
         <h3 class="font-display text-xl font-bold mb-4">Hours & Contact</h3>
         <p class="text-white/70 mb-2">Open Daily: 8:00 AM - 10:00 PM</p>
         <p class="text-white/70 mb-4">Phone: +91 78549 17070</p>
-        <a href="https://wa.me/917854917070" target="_blank" class="inline-block bg-brand-yellow text-brand-blue font-bold px-6 py-3 rounded-xl hover:scale-105 transition-transform">
+        <a href="https://wa.me/917854917070" target="_blank" class="btn-3d inline-block bg-brand-yellow text-brand-blue font-bold px-6 py-3 rounded-xl transition-transform">
           Order Now
         </a>
       </div>
     </div>
     <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-white/50">
-      <p>© 2026 Double D's Café & Bakes. All rights reserved.</p>
-      <div class="flex gap-4 mt-4 md:mt-0">
-        <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
-        <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
-      </div>
+      <p>© <span id="footer-year">2026</span> Double D's Café & Bakes. All rights reserved.</p>
+      <p class="mt-4 md:mt-0">Made with ☕ in Sambalpur</p>
     </div>
   </div>
 </footer>
 
+<!-- ═══ FLOATING WHATSAPP BUTTON ═══ -->
+<a href="https://wa.me/917854917070" target="_blank" id="whatsapp-float" aria-label="Chat on WhatsApp" class="fixed bottom-6 right-6 z-[90] w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center shadow-[0_4px_20px_rgba(37,211,102,0.4)] hover:scale-110 hover:shadow-[0_6px_25px_rgba(37,211,102,0.5)] transition-all duration-300 opacity-0" style="transition: opacity 0.5s ease, transform 0.3s ease;">
+  <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.418-.099.824zm-3.423-14.416c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm.082 19.165s-.005 0-.014 0c-1.562 0-3.09-.418-4.43-1.21l-.317-.187-3.29.863.878-3.208-.206-.328c-.872-1.391-1.332-2.992-1.332-4.634 0-4.858 3.951-8.811 8.814-8.811 4.861 0 8.813 3.953 8.813 8.811 0 4.856-3.952 8.809-8.816 8.809z"/></svg>
+</a>
+
 <!-- Book a Table Modal -->
 <div id="booking-modal" class="fixed inset-0 z-[100] flex items-center justify-center hidden opacity-0 transition-opacity duration-500 ease-out">
   <div class="absolute inset-0 bg-brand-blue/60 backdrop-blur-md transition-opacity" id="booking-modal-overlay"></div>
-  <div class="relative bg-white/10 backdrop-blur-2xl border border-white/20 rounded-[2rem] p-8 md:p-10 max-w-lg w-full mx-4 shadow-[0_0_50px_rgba(0,0,0,0.3)] transform scale-95 opacity-0 transition-all duration-500 ease-out" id="booking-modal-content">
+  <div class="relative bg-white/10 backdrop-blur-2xl border border-white/20 rounded-[2rem] p-8 md:p-10 max-w-lg w-full mx-4 shadow-[0_0_50px_rgba(0,0,0,0.3)] transform scale-95 opacity-0 transition-all duration-500 ease-out" id="booking-modal-content" style="box-shadow: 0 30px 80px -20px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.05);">
     <button id="close-modal" class="absolute top-6 right-6 text-white/70 hover:text-white transition-colors bg-white/5 hover:bg-white/10 p-2 rounded-full">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
     </button>
     <div class="inline-block mb-4 px-3 py-1 rounded-full border border-brand-yellow/30 bg-brand-yellow/10">
       <span class="text-brand-yellow font-medium text-xs uppercase tracking-widest">Reservation</span>
     </div>
-    <h3 class="font-display text-3xl font-bold text-white mb-2">Book Your Table</h3>
+    <h3 class="font-display text-3xl font-bold text-white mb-2" style="text-shadow: 0 2px 8px rgba(0,0,0,0.3);">Book Your Table</h3>
     <p class="text-white/70 mb-8 text-sm">Fill out the details below and we'll confirm your reservation instantly via WhatsApp.</p>
     
     <form id="booking-form" class="space-y-5">
       <div>
         <label class="block text-white/80 text-sm font-medium mb-1.5 ml-1">Your Name</label>
-        <input type="text" id="b-name" required class="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-3.5 text-white placeholder-white/30 focus:outline-none focus:border-brand-yellow focus:bg-white/10 transition-all" placeholder="John Doe">
+        <input type="text" id="b-name" required class="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-3.5 text-white placeholder-white/30 focus:outline-none focus:border-brand-yellow focus:bg-white/10 transition-all" placeholder="John Doe" style="box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);">
       </div>
       <div class="grid grid-cols-2 gap-4">
         <div>
           <label class="block text-white/80 text-sm font-medium mb-1.5 ml-1">Date</label>
-          <input type="date" id="b-date" required class="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-3.5 text-white placeholder-white/30 focus:outline-none focus:border-brand-yellow focus:bg-white/10 transition-all [color-scheme:dark]">
+          <input type="date" id="b-date" required class="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-3.5 text-white placeholder-white/30 focus:outline-none focus:border-brand-yellow focus:bg-white/10 transition-all [color-scheme:dark]" style="box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);">
         </div>
         <div>
           <label class="block text-white/80 text-sm font-medium mb-1.5 ml-1">Time</label>
-          <input type="time" id="b-time" required class="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-3.5 text-white placeholder-white/30 focus:outline-none focus:border-brand-yellow focus:bg-white/10 transition-all [color-scheme:dark]">
+          <input type="time" id="b-time" required class="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-3.5 text-white placeholder-white/30 focus:outline-none focus:border-brand-yellow focus:bg-white/10 transition-all [color-scheme:dark]" style="box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);">
         </div>
       </div>
       <div>
         <label class="block text-white/80 text-sm font-medium mb-1.5 ml-1">Number of Guests</label>
-        <select id="b-guests" required class="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-3.5 text-white focus:outline-none focus:border-brand-yellow focus:bg-white/10 transition-all [&>option]:bg-brand-blue appearance-none">
+        <select id="b-guests" required class="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-3.5 text-white focus:outline-none focus:border-brand-yellow focus:bg-white/10 transition-all [&>option]:bg-brand-blue appearance-none" style="box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);">
           <option value="1">1 Person</option>
           <option value="2" selected>2 People</option>
           <option value="3">3 People</option>
@@ -268,9 +355,9 @@
       </div>
       <div>
         <label class="block text-white/80 text-sm font-medium mb-1.5 ml-1">Special Requests (Optional)</label>
-        <textarea id="b-requests" rows="2" class="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-3.5 text-white placeholder-white/30 focus:outline-none focus:border-brand-yellow focus:bg-white/10 transition-all resize-none" placeholder="e.g. Window seat, Birthday setup..."></textarea>
+        <textarea id="b-requests" rows="2" class="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-3.5 text-white placeholder-white/30 focus:outline-none focus:border-brand-yellow focus:bg-white/10 transition-all resize-none" placeholder="e.g. Window seat, Birthday setup..." style="box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);"></textarea>
       </div>
-      <button type="submit" class="w-full mt-6 bg-brand-yellow text-brand-blue font-bold text-lg px-6 py-4 rounded-2xl hover:-translate-y-1 transition-all duration-300 shadow-[0_10px_25px_-5px_rgba(255,209,102,0.4)] flex items-center justify-center gap-2">
+      <button type="submit" class="btn-3d w-full mt-6 bg-brand-yellow text-brand-blue font-bold text-lg px-6 py-4 rounded-2xl transition-all duration-300 flex items-center justify-center gap-2">
         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.418-.099.824zm-3.423-14.416c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm.082 19.165s-.005 0-.014 0c-1.562 0-3.09-.418-4.43-1.21l-.317-.187-3.29.863.878-3.208-.206-.328c-.872-1.391-1.332-2.992-1.332-4.634 0-4.858 3.951-8.811 8.814-8.811 4.861 0 8.813 3.953 8.813 8.811 0 4.856-3.952 8.809-8.816 8.809z"/></svg>
         Confirm via WhatsApp
       </button>
